@@ -1,0 +1,35 @@
+@use '../../variables.scss';
+
+.new-recipes{
+    padding: 28px 3% 0;
+    height: auto;
+    min-height: 500px;
+    & > span {
+        color: variables.$color-secondary;
+        font-size: 67px;
+        font-family: variables.$font-primary;
+    }
+
+    &__carousel {
+        list-style-type: none;
+        display: flex;
+        padding: 0;
+        justify-content: space-between;
+        margin: 6% 0;
+    }
+
+    @media (max-width: variables.$big-screen) {
+        .new-recipes__carousel {
+            overflow-x: scroll;
+            display: flex;
+            column-gap: 26px;
+            height: 436px;
+            align-items: center;
+            margin: 0;
+        }
+    }
+}
+
+.recipe-card__info{
+    height: 100%;
+}

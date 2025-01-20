@@ -1,0 +1,24 @@
+@use "./variables";
+@use "./components/NavBar/navBar";
+@use "./components/Hero/hero";
+
+@use "./containers/Categories/categories.scss";
+@use "./containers/RecipeCarousel/recipesCarousel";
+@use "./containers/RecipesByCategorie/recipesByCategory";
+@use "./containers/RecipeCard/recipeCard";
+
+@use "./components/Footer/footer";
+
+body {
+  margin: 0;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.main-content{
+    flex: 1;
+}

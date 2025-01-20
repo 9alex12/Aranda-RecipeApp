@@ -1,0 +1,37 @@
+@use '../../variables.scss';
+
+.hero {
+    display: flex;
+    height: 416px;
+    align-items: center;
+
+    &__img{
+        object-fit: cover;
+        min-height: 400px;
+        max-height: 420px;
+        width: 100%;
+        height: fit-content;
+        position: absolute;
+        z-index: -3;
+    }
+}
+
+.hero__text {
+    font-size: 74px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-left: 20%;
+    line-height: 0.7;
+    color: white;
+    z-index: 3;
+    &-one {
+        font-size: 1em;
+        font-family: variables.$font-secondary;
+    }
+
+    &-two {
+        font-size: 0.9em;
+        font-family: variables.$font-primary;
+    }
+}

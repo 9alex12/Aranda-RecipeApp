@@ -1,0 +1,33 @@
+@use "../../variables.scss";
+
+.text-recipes {
+  color: variables.$color-secondary;
+  font-size: 67px;
+  font-family: variables.$font-primary;
+  margin-left: 40px;
+}
+
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(266px, 1fr));
+  grid-auto-rows: 305px; 
+  padding: 15px;
+  justify-items: center;
+  list-style: none;
+  gap: 100px 50px;
+  margin: 100px 0;
+  justify-content: space-evenly;
+  padding: 20px;
+  & li {
+    height: max-content;
+    text-align: center;
+  }
+}
+
+.loader {
+  color: variables.$color-secondary;
+  font-family: variables.$font-primary;
+  margin: 10% auto;
+  font-size: 48px;
+  width: 30%;
+}

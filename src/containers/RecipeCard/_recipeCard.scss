@@ -1,0 +1,98 @@
+@use "../../variables.scss";
+
+.recipe-card {
+  height: max-content;
+  min-height: 269px;
+  width: 266px;
+  min-width: 266px;
+  background: transparent linear-gradient(180deg, #e9f1fa 0%, #ffffff 100%) 0%
+    0% no-repeat padding-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 3px 4px 7px 0px rgba(153, 148, 153, 1);
+
+  &-turned {
+    display: none;
+  }
+
+  &:hover {
+    .recipe-card__info {
+      display: none;
+    }
+
+    .recipe-card-turned {
+      display: block;
+    }
+
+    .recipe-card-turned {
+      &__description {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .recipe-card-turned span {
+          font-size: 17px;
+        }
+
+        &-title {
+          font-family: variables.$font-primary;
+          color: variables.$color-secondary;
+        }
+
+        &-value {
+          font-family: variables.$font-secondary;
+          color: variables.$color-footer-text;
+        }
+      }
+    }
+  }
+
+  &__img {
+    height: 158px;
+    min-height: 158px;
+    width: 164px;
+    border-radius: 50%;
+    margin-top: -23%;
+  }
+
+  &__info {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &__title {
+    font-family: variables.$font-secondary;
+    width: fit-content;
+    margin: 0;
+    color: variables.$color-secondary;
+    font-size: 30px;
+    span {
+      font-family: variables.$font-primary;
+    }
+  }
+
+  &__raiting {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    & p {
+      margin: 0;
+      display: flex;
+      align-items: baseline;
+      gap: 12.5px;
+    }
+
+    & span {
+      font-size: 26px;
+      color: variables.$color-footer-text;
+      font-family: variables.$font-secondary;
+    }
+  }
+}
